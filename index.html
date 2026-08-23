@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Câmara escura — da imagem invertida ao aquecimento solar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="brand">câmara escura</span>
+    <nav class="nav">
+      <a href="#historia">história</a>
+      <a href="#funciona">como funciona</a>
+      <a href="#montagem">montagem</a>
+      <a href="#piscina">projeto integrador</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="topo">
+    <div class="hero-text">
+      <p class="eyebrow">óptica geométrica &middot; experimento milenar</p>
+      <h1>Um furo, uma caixa<br>e uma imagem invertida</h1>
+      <p class="lede">A câmara escura é um dos experimentos mais simples e, ao mesmo tempo, mais reveladores da história da ciência.</p>
+      <a href="#funciona" class="cta">ver como a luz faz isso &darr;</a>
+    </div>
+    <div class="hero-diagram" aria-hidden="true">
+      <svg viewBox="0 0 460 320" class="pinhole-svg">
+        <defs>
+          <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#e3a542" stop-opacity="0.75"/>
+            <stop offset="100%" stop-color="#e3a542" stop-opacity="0.08"/>
+          </linearGradient>
+        </defs>
+        <!-- object: upright triangle -->
+        <polygon points="40,220 40,120 75,220" class="obj-shape"/>
+        <!-- box -->
+        <rect x="150" y="40" width="14" height="240" class="box-wall"/>
+        <circle cx="157" cy="160" r="3.2" class="pinhole"/>
+        <rect x="380" y="30" width="14" height="260" class="box-wall screen"/>
+        <!-- rays -->
+        <line x1="40" y1="120" x2="157" y2="160" class="ray ray-a"/>
+        <line x1="157" y1="160" x2="386" y2="248" class="ray ray-a"/>
+        <line x1="40" y1="220" x2="157" y2="160" class="ray ray-b"/>
+        <line x1="157" y1="160" x2="386" y2="90" class="ray ray-b"/>
+        <!-- inverted image -->
+        <polygon points="386,90 386,248 421,90" class="img-shape"/>
+        <text x="40" y="240" class="lbl">objeto</text>
+        <text x="140" y="300" class="lbl">orifício</text>
+        <text x="365" y="14" class="lbl">projeção invertida</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro container">
+    <p class="drop">A câmara escura é um dos experimentos mais simples e, ao mesmo tempo, mais reveladores da história da ciência. Trata-se de uma caixa ou ambiente completamente escuro, com um pequeno orifício em uma das paredes, capaz de projetar (na parede oposta) uma imagem invertida do que está do lado de fora. Apesar de sua simplicidade, esse fenômeno carrega em si os fundamentos da óptica geométrica e é considerado o precursor direto da câmera fotográfica moderna.</p>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section id="historia" class="section">
+    <div class="container">
+      <p class="eyebrow">história</p>
+      <h2>História</h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-mark">antiguidade — renascimento</span>
+          <p>Conhecido desde a Antiguidade por Aristóteles e detalhado no século XI pelo cientista árabe Ibn al-Haytham, o sistema virou ferramenta de arte no Renascimento. Leonardo da Vinci e outros pintores usavam caixas portáteis com lentes e espelhos para desenhar paisagens com proporções perfeitas.</p>
+          <figure class="tl-figure">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/1646_Athanasius_Kircher_-_Camera_obscura.jpg?width=700" alt="Ilustração de 1646 de Athanasius Kircher mostrando uma câmara escura portátil, com um artista desenhando a partir da imagem projetada." loading="lazy">
+            <figcaption>Câmara escura portátil ilustrada por Athanasius Kircher, 1646 — Wikimedia Commons, domínio público</figcaption>
+          </figure>
+        </div>
+        <div class="tl-item">
+          <span class="tl-mark">século XIX</span>
+          <p>No século XIX, o francês Nicéphore Niépce adicionou placas químicas dentro dessa caixa para fixar a imagem, criando a primeira máquina fotográfica.</p>
+          <figure class="tl-figure">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista_desde_la_ventana_en_Le_Gras.jpg?width=700" alt="View from the Window at Le Gras, de Nicéphore Niépce — a fotografia mais antiga que se tem registro, feita com uma câmara escura." loading="lazy">
+            <figcaption>«View from the Window at Le Gras», Nicéphore Niépce, 1826/1827 — a fotografia mais antiga já registrada. Wikimedia Commons, domínio público</figcaption>
+          </figure>
+        </div>
+        <div class="tl-item">
+          <span class="tl-mark">hoje</span>
+          <p>Hoje, esse mesmo princípio básico faz funcionar as câmeras dos nossos celulares.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="funciona" class="section alt">
+    <div class="container">
+      <p class="eyebrow">como ela funciona</p>
+      <h2>Como ela funciona</h2>
+
+      <div class="two-col">
+        <div>
+          <p>Em um meio transparente e homogêneo, a luz se propaga em linha reta, sem se curvar espontaneamente. Então, se tivermos uma fonte de luz, os raios que dela partem seguem uma trajetória retilínea em todas as direções até que encontrem um obstáculo e mudem de direção; se não houvesse nenhum obstáculo entre o objeto e uma parede, por exemplo, todos esses raios se misturariam ao atingi-la, e nenhuma imagem seria formada. Na câmara escura, os raios de luz viajam até a caixa, mas só um feixe de raio muito fino consegue atravessar pelo orifício da caixa, que funciona como um filtro geométrico.</p>
+          <p>Até aqui, provamos o conceito de propagação retilínea uniforme, já que ela garante que a direção do raio esteja correta, tanto quanto a homogeneidade, que garante que essa direção não mude no meio do caminho até a caixa. Quando o raio atinge o orifício, ele continua sua trajetória retilínea, atinge um ponto específico na parede oposta. O mesmo ocorre para cada outro ponto do objeto, cada um projeta, através do orifício, um único raio que vai parar em um ponto exclusivo da parede.</p>
+          <p>Essa correspondência ponto a ponto entre o objeto e a projeção é o que permite a formação de uma imagem reconhecível. Como os raios se cruzam exatamente no orifício, o resultado é uma imagem invertida: o que estava embaixo no objeto aparece em cima na projeção, e vice-versa, e a imagem também é espelhada lateralmente.</p>
+        </div>
+        <figure class="tl-figure standalone">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Camera_obscura_box.jpg?width=700" alt="Diagrama clássico de uma câmara escura mostrando os raios de luz cruzando pelo orifício e formando uma imagem invertida na parede oposta." loading="lazy">
+          <figcaption>Diagrama clássico da formação de imagem por um orifício — Wikimedia Commons, domínio público</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO INTERATIVA -->
+  <section class="section demo">
+    <div class="container">
+      <p class="eyebrow">experimente</p>
+      <h2>O tamanho do orifício importa</h2>
+      <p class="section-intro">Arraste o controle para ver o que acontece com a projeção quando o orifício muda de tamanho — o mesmo trade-off que qualquer pessoa enfrenta ao montar uma câmara escura.</p>
+
+      <div class="demo-box">
+        <div class="demo-screen">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/CameraObscura.JPG?width=700" alt="Cena de referência usada na simulação de nitidez." id="demoImg">
+          <div class="demo-vignette"></div>
+        </div>
+        <div class="demo-controls">
+          <label for="apertureRange">tamanho do orifício</label>
+          <input type="range" id="apertureRange" min="1" max="100" value="50">
+          <div class="demo-readout">
+            <span id="apertureState">equilíbrio</span>
+            <span id="apertureNote">nitidez razoável, luz razoável</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MONTAGEM -->
+  <section id="montagem" class="section">
+    <div class="container">
+      <p class="eyebrow">explicando cada passo a passo de montagem</p>
+      <h2>Explicando cada passo a passo de montagem</h2>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div>
+            <h3>O orifício</h3>
+            <p>O tamanho do orifício é o maior influente do experimento. Quando ele for muito grande, entrará muita luz, logo quanto maior for o buraco, mais luz entrará e menos nítido a imagem formada ficará. Se o orifício for muito pequeno, permite que apenas um raio muito fino de cada ponto do objeto atravesse, produzindo uma imagem mais nítida — porém mais escura, já que pouca luz passa. Em escalas extremamente pequenas, o orifício passa a apresentar efeitos de difração, um fenômeno ondulatório que volta a comprometer a nitidez. Existe, portanto, um tamanho ideal de abertura, um dos primeiros problemas práticos de óptica enfrentados pelos estudiosos do fenômeno.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <div>
+            <h3>As paredes internas</h3>
+            <p>As paredes internas da caixa também precisam ser escuras e foscas, para que a pouca luz que entra pelo orifício não seja refletida internamente e "contamine" outras partes da projeção com luz espalhada. Isso preserva o contraste da imagem, o mesmo motivo pelo qual o interior de câmeras fotográficas modernas é pintado de preto fosco.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <div>
+            <h3>O tamanho da câmara</h3>
+            <p>O tamanho da câmara pode variar muito, indo desde pequenas caixas de sapato até salas enormes.</p>
+          </div>
+        </div>
+      </div>
+
+      <figure class="tl-figure standalone wide">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/CameraObscura.JPG?width=1000" alt="Câmara escura em tamanho real, construída como uma sala, na Universidade da Carolina do Norte em Chapel Hill." loading="lazy">
+        <figcaption>Câmara escura em tamanho real — o mesmo princípio de uma caixa de sapato, em escala de sala. Wikimedia Commons, domínio público</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROJETO INTEGRADOR -->
+  <section id="piscina" class="section teal">
+    <div class="container">
+      <p class="eyebrow">relação com o projeto integrador</p>
+      <h2>Relação com o projeto integrador</h2>
+      <p class="section-intro">À primeira vista, a câmara escura e o aquecimento solar de piscinas parecem pertencer a mundos completamente diferentes, um é um fenômeno óptico voltado à formação de imagens, o outro é um projeto de acessibilidade em uma piscina escolar. No entanto, ambos compartilham a mesma base física, os princípios da óptica geométrica que regem como a luz se propaga e interage com superfícies. Compreender a câmara escura é, na prática, compreender os fundamentos que tornam possível captar e aproveitar a energia solar para aquecer água.</p>
+
+      <div class="two-col reverse">
+        <figure class="tl-figure standalone">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Solar_water_heater.jpg" alt="Coletor solar plano usado para aquecer água, do mesmo tipo empregado em sistemas de aquecimento de piscinas." loading="lazy">
+          <figcaption>Coletor solar plano — o mesmo princípio usado no aquecimento de água de piscinas. Wikimedia Commons, domínio público</figcaption>
+        </figure>
+        <div>
+          <p>O funcionamento da câmara escura depende do fato de que a luz se propaga em linha reta em um meio homogêneo. É exatamente esse mesmo princípio que permite prever, calcular e otimizar como os raios solares incidem sobre um coletor de aquecimento: como a trajetória da luz é previsível, é possível posicionar painéis e coletores com ângulos calculados para maximizar a quantidade de energia captada ao longo do dia.</p>
+          <p>Na câmara escura, a geometria dos raios determina onde a imagem se forma. Em um coletor solar, a mesma geometria determina quanta energia luminosa atinge a superfície absorvedora — e ambas as aplicações derivam diretamente da ideia mais básica da óptica geométrica.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p>A maioria dos sistemas de aquecimento solar para piscinas, no entanto, utiliza coletores solares planos — mantas ou placas escuras por onde a água circula. Aqui, o princípio óptico central não é a formação de imagem, mas a absorção da luz:</p>
+        <ul class="check-list">
+          <li>Superfícies escuras absorvem a maior parte do espectro de luz visível e infravermelho, convertendo a energia dos fótons incidentes em calor.</li>
+          <li>Quanto menor a reflectância da superfície (ou seja, quanto menos luz ela reflete), maior a eficiência de conversão de luz solar em energia térmica.</li>
+        </ul>
+        <p>Esse é o mesmo tipo de raciocínio óptico usado para explicar por que o interior de uma câmara escura precisa ser completamente escuro (e fosco): superfícies escuras absorvem a luz dispersa, evitando reflexos internos que borrariam a imagem projetada. Em ambos os casos, a cor e a textura da superfície são escolhidas deliberadamente com base em como interagem com a luz.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSÃO -->
+  <section class="section conclusion">
+    <div class="container narrow">
+      <p class="eyebrow">conclusão</p>
+      <p class="drop">A câmara escura e o aquecimento solar de piscinas parecem, à primeira vista, aplicações distantes uma da outra, uma voltada à formação de imagens, a outra à geração de calor. Mas ambas nascem do mesmo: os princípios da óptica geométrica que descrevem como a luz se propaga, se concentra e é absorvida.</p>
+      <p>Entender como um simples orifício projeta uma imagem invertida é, em essência, entender a mesma geometria de raios que torna possível captar energia solar de forma eficiente e transformá-la em água aquecida para uma piscina, uma bonita demonstração de como um princípio físico simples, observado há milênios, continua presente em soluções tecnológicas do dia a dia.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>câmara escura &middot; óptica geométrica</span>
+    <span class="footer-note">imagens: Wikimedia Commons / National Archives (EUA), domínio público</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
