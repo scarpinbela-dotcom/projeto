@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Câmara escura — da imagem invertida ao aquecimento solar</title>
+<title>Câmara escura — óptica, história e ciência de um simples orifício</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,9 +18,10 @@
     <span class="brand">câmara escura</span>
     <nav class="nav">
       <a href="#historia">história</a>
+      <a href="#utilizacao">utilização</a>
       <a href="#funciona">como funciona</a>
+      <a href="#interativo">interativo</a>
       <a href="#montagem">montagem</a>
-      <a href="#piscina">projeto integrador</a>
     </nav>
   </div>
 </header>
@@ -99,6 +100,37 @@
     </div>
   </section>
 
+  <!-- UTILIZAÇÃO -->
+  <section id="utilizacao" class="section alt">
+    <div class="container">
+      <p class="eyebrow">utilização ao longo do tempo</p>
+      <h2>Para que ela era usada</h2>
+      <p class="section-intro">Muito antes de virar sinônimo de fotografia, a câmara escura foi instrumento científico, atração de entretenimento e, por fim, a semente do cinema.</p>
+
+      <div class="use-grid">
+        <div class="use-card">
+          <span class="use-icon">☉</span>
+          <h3>Astronomia</h3>
+          <p>Um dos usos mais antigos foi observar o céu com segurança. Olhar diretamente para o Sol machuca os olhos, então astrônomos projetavam sua imagem através de um orifício para estudá-lo sem risco. Foi assim que, em 1607, Johannes Kepler observou uma mancha solar usando uma câmara escura — inicialmente achou que fosse o planeta Mercúrio passando à frente do Sol. Eclipses solares também eram registrados dessa forma: o desenho mais antigo que se conhece de um eclipse observado por câmara escura é de 1544, feito por Gemma Frisius.</p>
+        </div>
+        <div class="use-card">
+          <span class="use-icon">◐</span>
+          <h3>Entretenimento</h3>
+          <p>No século XIX, câmaras escuras em tamanho de sala viraram atrações turísticas populares, especialmente em cidades litorâneas da Europa. As pessoas pagavam para entrar em uma sala escura e ver, projetada ao vivo sobre uma mesa, a paisagem e o movimento das ruas lá fora — uma espécie de "televisão ao vivo" séculos antes da televisão existir.</p>
+        </div>
+        <div class="use-card">
+          <span class="use-icon">▶</span>
+          <h3>Gravações e cinema</h3>
+          <p>O mesmo princípio óptico — luz controlada por uma pequena abertura, atingindo uma superfície sensível — é a base das câmeras de filmagem. Em 1895, os irmãos Lumière usaram o cinematógrafo para capturar uma sequência rápida de quadros fotográficos e projetá-los em movimento, criando as primeiras gravações exibidas publicamente na história do cinema. Câmeras de vídeo e celulares atuais continuam usando esse núcleo óptico, quadro a quadro, para gravar.</p>
+          <figure class="tl-figure">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cinematograf-Camera1.jpg?width=700" alt="O cinematógrafo Lumière em modo de filmagem, câmera usada em 1895 para as primeiras gravações públicas de cinema." loading="lazy">
+            <figcaption>O cinematógrafo Lumière, 1895 — a câmera por trás das primeiras gravações de cinema. Wikimedia Commons, domínio público</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- COMO FUNCIONA -->
   <section id="funciona" class="section alt">
     <div class="container">
@@ -119,13 +151,15 @@
     </div>
   </section>
 
-  <!-- DEMO INTERATIVA -->
-  <section class="section demo">
+  <!-- INTERATIVO -->
+  <section id="interativo" class="section demo">
     <div class="container">
       <p class="eyebrow">experimente</p>
-      <h2>O tamanho do orifício importa</h2>
-      <p class="section-intro">Arraste o controle para ver o que acontece com a projeção quando o orifício muda de tamanho — o mesmo trade-off que qualquer pessoa enfrenta ao montar uma câmara escura.</p>
+      <h2>Coloque a mão na massa</h2>
+      <p class="section-intro">Três pequenos experimentos para sentir, na prática, o que os parágrafos acima explicam.</p>
 
+      <h3 class="demo-title">1. O tamanho do orifício importa</h3>
+      <p class="demo-caption">Arraste o controle para ver o que acontece com a projeção quando o orifício muda de tamanho — o mesmo trade-off que qualquer pessoa enfrenta ao montar uma câmara escura.</p>
       <div class="demo-box">
         <div class="demo-screen">
           <img src="https://commons.wikimedia.org/wiki/Special:FilePath/CameraObscura.JPG?width=700" alt="Cena de referência usada na simulação de nitidez." id="demoImg">
@@ -139,6 +173,67 @@
             <span id="apertureNote">nitidez razoável, luz razoável</span>
           </div>
         </div>
+      </div>
+
+      <h3 class="demo-title spaced">2. A distância muda o tamanho da imagem</h3>
+      <p class="demo-caption">Afaste a parede de projeção e veja a imagem invertida crescer — a mesma geometria de raios que explica por que uma câmara escura maior projeta imagens maiores.</p>
+      <div class="demo-box">
+        <div class="ray-demo">
+          <svg viewBox="0 0 460 260" class="ray-demo-svg" id="raySvg">
+            <polygon points="30,190 30,110 62,190" class="obj-shape"/>
+            <rect x="140" y="30" width="12" height="200" class="box-wall"/>
+            <circle cx="146" cy="130" r="3" class="pinhole"/>
+            <line x1="30" y1="110" x2="146" y2="130" class="ray ray-a" id="rayA1"/>
+            <line x1="146" y1="130" x2="420" y2="220" class="ray ray-a" id="rayA2"/>
+            <line x1="30" y1="190" x2="146" y2="130" class="ray ray-b" id="rayB1"/>
+            <line x1="146" y1="130" x2="420" y2="40" class="ray ray-b" id="rayB2"/>
+            <rect x="414" y="20" width="10" height="220" class="box-wall screen" id="screenWall"/>
+            <polygon points="420,40 420,220 452,40" class="img-shape" id="imgShape"/>
+            <text x="24" y="210" class="lbl">objeto</text>
+            <text x="118" y="252" class="lbl">orifício</text>
+            <text x="400" y="14" class="lbl">parede</text>
+          </svg>
+        </div>
+        <div class="demo-controls">
+          <label for="distanceRange">distância orifício → parede</label>
+          <input type="range" id="distanceRange" min="20" max="100" value="45">
+          <div class="demo-readout">
+            <span id="distanceState">imagem pequena</span>
+            <span id="distanceNote">quanto mais perto, menor e mais escura</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="demo-title spaced">3. Teste o que você aprendeu</h3>
+      <div class="quiz-box" id="quizBox">
+        <div class="quiz-question" data-answer="b">
+          <p class="quiz-prompt">1. Por que a imagem projetada pela câmara escura aparece invertida?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="a">O orifício funciona como um espelho</button>
+            <button class="quiz-opt" data-opt="b">Os raios de luz se cruzam exatamente no orifício</button>
+            <button class="quiz-opt" data-opt="c">A luz muda de cor ao entrar na caixa</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+        <div class="quiz-question" data-answer="c">
+          <p class="quiz-prompt">2. O que acontece se o orifício for grande demais?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="a">A imagem fica mais escura</button>
+            <button class="quiz-opt" data-opt="b">A imagem desaparece por completo</button>
+            <button class="quiz-opt" data-opt="c">A imagem fica mais clara, porém borrada</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+        <div class="quiz-question" data-answer="a">
+          <p class="quiz-prompt">3. Por que as paredes internas da câmara escura precisam ser escuras?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-opt="a">Para evitar reflexos que reduzem o contraste da imagem</button>
+            <button class="quiz-opt" data-opt="b">Para deixar a caixa mais leve</button>
+            <button class="quiz-opt" data-opt="c">Para a luz mudar de direção mais vezes</button>
+          </div>
+          <p class="quiz-feedback"></p>
+        </div>
+        <p class="quiz-score" id="quizScore"></p>
       </div>
     </div>
   </section>
@@ -180,41 +275,12 @@
     </div>
   </section>
 
-  <!-- PROJETO INTEGRADOR -->
-  <section id="piscina" class="section teal">
-    <div class="container">
-      <p class="eyebrow">relação com o projeto integrador</p>
-      <h2>Relação com o projeto integrador</h2>
-      <p class="section-intro">À primeira vista, a câmara escura e o aquecimento solar de piscinas parecem pertencer a mundos completamente diferentes, um é um fenômeno óptico voltado à formação de imagens, o outro é um projeto de acessibilidade em uma piscina escolar. No entanto, ambos compartilham a mesma base física, os princípios da óptica geométrica que regem como a luz se propaga e interage com superfícies. Compreender a câmara escura é, na prática, compreender os fundamentos que tornam possível captar e aproveitar a energia solar para aquecer água.</p>
-
-      <div class="two-col reverse">
-        <figure class="tl-figure standalone">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Solar_water_heater.jpg" alt="Coletor solar plano usado para aquecer água, do mesmo tipo empregado em sistemas de aquecimento de piscinas." loading="lazy">
-          <figcaption>Coletor solar plano — o mesmo princípio usado no aquecimento de água de piscinas. Wikimedia Commons, domínio público</figcaption>
-        </figure>
-        <div>
-          <p>O funcionamento da câmara escura depende do fato de que a luz se propaga em linha reta em um meio homogêneo. É exatamente esse mesmo princípio que permite prever, calcular e otimizar como os raios solares incidem sobre um coletor de aquecimento: como a trajetória da luz é previsível, é possível posicionar painéis e coletores com ângulos calculados para maximizar a quantidade de energia captada ao longo do dia.</p>
-          <p>Na câmara escura, a geometria dos raios determina onde a imagem se forma. Em um coletor solar, a mesma geometria determina quanta energia luminosa atinge a superfície absorvedora — e ambas as aplicações derivam diretamente da ideia mais básica da óptica geométrica.</p>
-        </div>
-      </div>
-
-      <div class="callout">
-        <p>A maioria dos sistemas de aquecimento solar para piscinas, no entanto, utiliza coletores solares planos — mantas ou placas escuras por onde a água circula. Aqui, o princípio óptico central não é a formação de imagem, mas a absorção da luz:</p>
-        <ul class="check-list">
-          <li>Superfícies escuras absorvem a maior parte do espectro de luz visível e infravermelho, convertendo a energia dos fótons incidentes em calor.</li>
-          <li>Quanto menor a reflectância da superfície (ou seja, quanto menos luz ela reflete), maior a eficiência de conversão de luz solar em energia térmica.</li>
-        </ul>
-        <p>Esse é o mesmo tipo de raciocínio óptico usado para explicar por que o interior de uma câmara escura precisa ser completamente escuro (e fosco): superfícies escuras absorvem a luz dispersa, evitando reflexos internos que borrariam a imagem projetada. Em ambos os casos, a cor e a textura da superfície são escolhidas deliberadamente com base em como interagem com a luz.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- CONCLUSÃO -->
   <section class="section conclusion">
     <div class="container narrow">
       <p class="eyebrow">conclusão</p>
-      <p class="drop">A câmara escura e o aquecimento solar de piscinas parecem, à primeira vista, aplicações distantes uma da outra, uma voltada à formação de imagens, a outra à geração de calor. Mas ambas nascem do mesmo: os princípios da óptica geométrica que descrevem como a luz se propaga, se concentra e é absorvida.</p>
-      <p>Entender como um simples orifício projeta uma imagem invertida é, em essência, entender a mesma geometria de raios que torna possível captar energia solar de forma eficiente e transformá-la em água aquecida para uma piscina, uma bonita demonstração de como um princípio físico simples, observado há milênios, continua presente em soluções tecnológicas do dia a dia.</p>
+      <p class="drop">A câmara escura não é apenas uma curiosidade histórica: é a demonstração experimental mais simples de que a luz se propaga em linha reta.</p>
+      <p>Do estudo de eclipses solares por astrônomos, passando pelas salas de entretenimento do século XIX, até as primeiras gravações de cinema dos irmãos Lumière, o mesmo princípio óptico se repete: um orifício controlado, um feixe de luz previsível e uma superfície onde a imagem se forma. Entender esse fenômeno milenar é entender a raiz de tudo o que hoje chamamos de fotografia e cinema.</p>
     </div>
   </section>
 
@@ -223,7 +289,7 @@
 <footer class="footer">
   <div class="container footer-inner">
     <span>câmara escura &middot; óptica geométrica</span>
-    <span class="footer-note">imagens: Wikimedia Commons / National Archives (EUA), domínio público</span>
+    <span class="footer-note">imagens: Wikimedia Commons, domínio público</span>
   </div>
 </footer>
 
